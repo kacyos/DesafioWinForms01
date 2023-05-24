@@ -2,9 +2,9 @@ using System.Windows.Forms;
 
 namespace DesafioWinForms01
 {
-    public partial class Form1 : Form
+    public partial class Lista : Form
     {
-        public Form1()
+        public Lista()
         {
             InitializeComponent();
         }
@@ -19,35 +19,51 @@ namespace DesafioWinForms01
 
             if (dialogSearch.ShowDialog() == DialogResult.OK)
             {
+                pessoas.Clear();
+                alunos.Clear();
+                cursos.Clear();
+
                 Conector.carregarDados(pessoas, alunos, cursos, dialogSearch.FileName);
-                MessageBox.Show($"Número de pessoas: {pessoas.Count()}\nNúmero de alunos: {alunos.Count()}");
 
                 alunos.ForEach(aluno =>
                 {
                     gridAlunos.Rows.Add(aluno.Nome, aluno.Curso.NomeCurso);
                     textBoxCaminhoArquivo.Text = dialogSearch.FileName;
                 });
+
+
+
+
+
+                if (alunos.Count > 0)
+                {
+                    MessageBox.Show($"Número de pessoas: {pessoas.Count()}\nNúmero de alunos: {alunos.Count()}", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
-        private void listarAlunos(object sender, MouseEventArgs e)
+
+
+        private void listarPessoasECursos(object sender, EventArgs e)
         {
-            if (pessoas.Count > 0)
+
+            // Verificando qual TabPage foi selecionado
+            if (tabControl.SelectedTab == tabPagePessoas && pessoas.Count > 0 && gridPessoas.Rows.Count == 0)
             {
                 pessoas.ForEach(pessoa =>
                 {
                     gridPessoas.Rows.Add(pessoa.Nome, pessoa.Cidade, pessoa.Telefone, pessoa.Rg, pessoa.Cpf);
                 });
             }
-
-            if (cursos.Count > 0)
+            else if (tabControl.SelectedTab == tabPageCursos && cursos.Count > 0 && gridCursos.Rows.Count == 0)
             {
+
                 cursos.ForEach(curso =>
                 {
                     gridCursos.Rows.Add(curso.CodigoCurso, curso.NomeCurso);
                 });
-                
             }
+
         }
     }
 }

@@ -42,8 +42,14 @@ namespace DesafioWinForms01
                         string[] vetorCurso = item.Split("-");
                         curso = new Curso(vetorCurso[2], vetorCurso[3]);
                         aluno = new Aluno(listaDePessoas.Last().Nome, listaDePessoas.Last().Telefone, listaDePessoas.Last().Cidade, listaDePessoas.Last().Rg, listaDePessoas.Last().Cpf, vetorCurso[1], curso);
+
+                        if (!listDeCursos.Contains(curso))
+                        {
+                            listDeCursos.Add(curso);
+                        }
+
                         listaDeAlunos.Add(aluno);
-                        listDeCursos.Add(curso);
+                       
                     }
 
                 });
@@ -51,7 +57,7 @@ namespace DesafioWinForms01
             catch (Exception)
             {
                 MessageBox.Show("Falha ao ler o arquivo", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                throw;
+               
             }
 
         }

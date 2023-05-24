@@ -1,6 +1,6 @@
 ﻿namespace DesafioWinForms01
 {
-    partial class Form1
+    partial class Lista
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lista));
             dialogSearch = new OpenFileDialog();
             buttonBuscar = new Button();
             textBoxCaminhoArquivo = new TextBox();
@@ -89,7 +90,7 @@
             tabControl.SelectedIndex = 0;
             tabControl.Size = new Size(661, 330);
             tabControl.TabIndex = 2;
-            tabControl.MouseClick += listarAlunos;
+            tabControl.Click += listarPessoasECursos;
             // 
             // tabPageAlunos
             // 
@@ -110,9 +111,12 @@
             gridAlunos.Columns.AddRange(new DataGridViewColumn[] { Aluno, curso });
             gridAlunos.Dock = DockStyle.Fill;
             gridAlunos.Location = new Point(3, 3);
+            gridAlunos.MultiSelect = false;
             gridAlunos.Name = "gridAlunos";
             gridAlunos.ReadOnly = true;
+            gridAlunos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             gridAlunos.RowTemplate.Height = 25;
+            gridAlunos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gridAlunos.Size = new Size(647, 296);
             gridAlunos.TabIndex = 0;
             // 
@@ -148,13 +152,16 @@
             // 
             gridPessoas.AllowUserToAddRows = false;
             gridPessoas.AllowUserToDeleteRows = false;
-            gridPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridPessoas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             gridPessoas.Columns.AddRange(new DataGridViewColumn[] { nome, cidade, telefone, RG, cpf });
             gridPessoas.Dock = DockStyle.Fill;
             gridPessoas.Location = new Point(3, 3);
+            gridPessoas.MultiSelect = false;
             gridPessoas.Name = "gridPessoas";
             gridPessoas.ReadOnly = true;
+            gridPessoas.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             gridPessoas.RowTemplate.Height = 25;
+            gridPessoas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gridPessoas.Size = new Size(647, 296);
             gridPessoas.TabIndex = 0;
             // 
@@ -184,7 +191,7 @@
             // 
             // RG
             // 
-            RG.HeaderText = "rg";
+            RG.HeaderText = "RG";
             RG.MinimumWidth = 110;
             RG.Name = "RG";
             RG.ReadOnly = true;
@@ -212,13 +219,16 @@
             // 
             gridCursos.AllowUserToAddRows = false;
             gridCursos.AllowUserToDeleteRows = false;
-            gridCursos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridCursos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             gridCursos.Columns.AddRange(new DataGridViewColumn[] { codigoCurso, nomeCurso });
             gridCursos.Dock = DockStyle.Fill;
             gridCursos.Location = new Point(0, 0);
+            gridCursos.MultiSelect = false;
             gridCursos.Name = "gridCursos";
             gridCursos.ReadOnly = true;
+            gridCursos.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             gridCursos.RowTemplate.Height = 25;
+            gridCursos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             gridCursos.Size = new Size(653, 302);
             gridCursos.TabIndex = 1;
             // 
@@ -247,17 +257,23 @@
             label1.TabIndex = 3;
             label1.Text = "Caminho do arquivo";
             // 
-            // Form1
+            // Lista
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(682, 450);
+            ClientSize = new Size(678, 446);
             Controls.Add(label1);
             Controls.Add(tabControl);
             Controls.Add(textBoxCaminhoArquivo);
             Controls.Add(buttonBuscar);
-            Name = "Form1";
-            Text = "Form1";
+            FormBorderStyle = FormBorderStyle.Fixed3D;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MaximumSize = new Size(698, 489);
+            MinimumSize = new Size(698, 489);
+            Name = "Lista";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Lista de Pessoas";
             tabControl.ResumeLayout(false);
             tabPageAlunos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)gridAlunos).EndInit();
@@ -285,14 +301,14 @@
         private DataGridView gridPessoas;
         private DataGridViewTextBoxColumn Aluno;
         private DataGridViewTextBoxColumn curso;
+        private TabPage tabPageCursos;
+        private DataGridView gridCursos;
+        private DataGridViewTextBoxColumn codigoCurso;
+        private DataGridViewTextBoxColumn nomeCurso;
         private DataGridViewTextBoxColumn nome;
         private DataGridViewTextBoxColumn cidade;
         private DataGridViewTextBoxColumn telefone;
         private DataGridViewTextBoxColumn RG;
         private DataGridViewTextBoxColumn cpf;
-        private TabPage tabPageCursos;
-        private DataGridView gridCursos;
-        private DataGridViewTextBoxColumn codigoCurso;
-        private DataGridViewTextBoxColumn nomeCurso;
     }
 }

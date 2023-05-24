@@ -4,7 +4,6 @@ F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\bin\Debug\net6.0-wi
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\bin\Debug\net6.0-windows\DesafioWinForms01.dll
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\bin\Debug\net6.0-windows\DesafioWinForms01.pdb
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.csproj.AssemblyReference.cache
-F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.Form1.resources
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.csproj.GenerateResource.cache
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.GeneratedMSBuildEditorConfig.editorconfig
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.AssemblyInfoInputs.cache
@@ -15,3 +14,4 @@ F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-wi
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.pdb
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.genruntimeconfig.cache
 F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\ref\DesafioWinForms01.dll
+F:\Projetos\C_Sharp_Atos\DesafioWinForms01\DesafioWinForms01\obj\Debug\net6.0-windows\DesafioWinForms01.Lista.resources

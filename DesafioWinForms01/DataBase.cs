@@ -32,7 +32,7 @@ namespace DesafioWinForms01
 			{
 
 				MessageBox.Show("Falha ao ler o arquivo","Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-				throw;
+				return null;
 			}
         }
     }
